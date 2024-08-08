@@ -10,7 +10,7 @@ function calcTotalPrice(cart){
     cart.totalCartPrice=cart.cartItems.reduce((prev,item) => prev += item.quantity*item.price,0)
 if(cart.discount){
     cart.totalCartPriceAfterDiscount=
-    cart.totalCartPrice - (cart.totalCartPrice * coupon.discount)/100}
+    cart.totalCartPrice - (cart.totalCartPrice * Coupon.discount)/100}
 }
 
 export const addToCart=asyncHandler(async(req,res,next)=>{
